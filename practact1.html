@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Profile Portal</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 5px;
+            background-color: white;
+            color: black;
+            font-size: 14px;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        header h1 {
+            font-size: 22px;
+            margin: 5px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        nav a {
+            color: blue;
+        }
+
+        aside {
+            float: left;
+            width: 18%;
+            min-height: 650px;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        aside h2 {
+            font-size: 16px;
+        }
+
+        main {
+            margin-left: 20%;
+            padding: 10px;
+        }
+
+        section {
+            padding: 10px 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        section h2 {
+            font-size: 18px;
+        }
+
+        figure {
+            margin: 10px 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 6px;
+            text-align: left;
+        }
+
+        form input, form select {
+            margin-top: 3px;
+        }
+
+        footer {
+            clear: both;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid gray;
+        }
+
+        @media (max-width: 600px) {
+            aside {
+                float: none;
+                width: 100%;
+                min-height: auto;
+            }
+
+            main {
+                margin-left: 0;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <h1>Student Profile Portal</h1>
+        <p>This is my personal student profile and interactive data submission dashboard.</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Profile</a>
+        <a href="#grades">Grades</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <aside>
+        <h2>Quick Notes</h2>
+        <ul>
+            <li>Name: Luis Miguel Hilario</li>
+            <li>Program: BS Information Technology</li>
+            <li>Year Level: 3rd Year</li>
+            <li>Status: Enrolled</li>
+        </ul>
+
+        <hr>
+
+        <h2>Profile Card</h2>
+        <p>
+            I'm a third-year BSIT student
+            who enjoys learning about technology, programming,
+            and web development.
+        </p>
+
+        <hr>
+
+        <h2>Interests</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Programming</li>
+            <li>Fitness</li>
+            <li>Technology</li>
+        </ul>
+    </aside>
+
+    <main>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm
+                <span style="border:1px solid black; padding:2px;">
+                    Luis Miguel Hilario
+                </span>,
+                a third-year Information Technology student
+                who enjoys exploring different areas of
+                technology and developing useful applications.
+                I am <strong>creative</strong> and
+                <em>adaptable</em>, especially when working
+                on programming projects.
+            </p>
+
+            <hr>
+
+            <p>
+                I consider myself <b>responsible</b> and
+                <i>determined</i> when facing challenges.
+                I enjoy learning new programming languages,
+                collaborating with others, and improving
+                my technical skills. My goal is to gain
+                more knowledge and experience in the
+                field of Information Technology.
+            </p>
+        </section>
+
+        <section>
+            <h2>Media &amp; Multimedia</h2>
+
+            <figure>
+                <img
+                    src="https://placehold.co/600x300?text=Campus+Illustration"
+                    alt="Illustration of a university campus building"
+                    width="400"
+                >
+                <figcaption>
+                    An illustration of the main campus building.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="grades">
+            <h2>Academic Record</h2>
+
+            <table>
+                <tr>
+                    <th>Student</th>
+                    <th>Subject</th>
+                    <th>Units</th>
+                    <th>Grade</th>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">Luis Miguel Hilario</td>
+                    <td>Web Systems and Technologies</td>
+                    <td>3</td>
+                    <td>1.25</td>
+                </tr>
+
+                <tr>
+                    <td>Fundamentals of Business Analytics</td>
+                    <td>3</td>
+                    <td>1.50</td>
+                </tr>
+
+                <tr>
+                    <td>Fundamentals of Analytics Modeling</td>
+                    <td>3</td>
+                    <td>1.50</td>
+                </tr>
+
+                <tr>
+                    <td>System Integration and Architecture</td>
+                    <td>3</td>
+                    <td>1.75</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">Total Units / GPA</td>
+                    <td>12</td>
+                    <td>1.50</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Registration / Feedback Form</h2>
+
+            <form action="/submit-profile-form" method="post"
+                  enctype="multipart/form-data">
+
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname"
+                       name="fullname" required>
+                <br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email"
+                       name="email" required>
+                <br><br>
+
+                <label for="phone">Telephone Number:</label><br>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+                    placeholder="0912-345-6789"
+                    required
+                >
+                <br><br>
+
+                <label for="track">Course Track:</label><br>
+                <select id="track" name="track" required>
+                    <option value="">-- Select a track --</option>
+
+                    <optgroup label="Computer Science">
+                        <option value="cs-software">
+                            Software Development
+                        </option>
+                        <option value="cs-ai">
+                            Artificial Intelligence
+                        </option>
+                    </optgroup>
+
+                    <optgroup label="Information Technology">
+                        <option value="it-network">
+                            Network Security
+                        </option>
+                        <option value="it-web">
+                            Web Development
+                        </option>
+                    </optgroup>
+                </select>
+                <br><br>
+
+                <label for="language">
+                    Favorite Programming Language:
+                </label><br>
+
+                <input
+                    type="text"
+                    id="language"
+                    name="language"
+                    list="language-options"
+                >
+
+                <datalist id="language-options">
+                    <option value="Python">
+                    <option value="Java">
+                    <option value="C#">
+                    <option value="JavaScript">
+                    <option value="C++">
+                </datalist>
+                <br><br>
+
+                <p>Elective Interests:</p>
+
+                <input type="checkbox" id="mobile"
+                       name="electives"
+                       value="mobile-app-development">
+                <label for="mobile">Mobile App Development</label>
+                <br>
+
+                <input type="checkbox" id="data"
+                       name="electives"
+                       value="data-science">
+                <label for="data">Data Science</label>
+                <br>
+
+                <input type="checkbox" id="security"
+                       name="electives"
+                       value="cybersecurity">
+                <label for="security">Cybersecurity</label>
+                <br>
+
+                <input type="checkbox" id="game"
+                       name="electives"
+                       value="game-development">
+                <label for="game">Game Development</label>
+                <br><br>
+
+                <label for="photo">Upload Profile Photo:</label><br>
+                <input
+                    type="file"
+                    id="photo"
+                    name="photo"
+                    accept="image/*"
+                >
+                <br><br>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Student Profile Portal -
+            Practice Activity 1 &amp; 2 (HTML &amp; CSS)
+        </p>
+    </footer>
+
+</body>
+</html>
